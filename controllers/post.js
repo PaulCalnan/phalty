@@ -21,7 +21,8 @@ exports.postById = (req, res, next, id) => {
 exports.getPosts = (req, res) => {
   const posts = Post.find()
     .populate("postedBy", "_id plate")
-    .select("_id title body")
+    .select("_id title body created")
+    .sort({created: -1}) // sort posts by latest created date
     .then(posts => {
       res.json(posts );
     })
