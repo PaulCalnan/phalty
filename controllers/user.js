@@ -87,9 +87,9 @@ exports.updateUser = (req, res, next) => {
       user.hashed_password = undefined;
       user.salt = undefined; // we don't want to send password or salt to front end
       res.json(user);
-    })
-  })
-}
+    });
+  });
+};
 
 exports.userPhoto = (req, res, next) => {
   if(req.profile.photo.data) {
