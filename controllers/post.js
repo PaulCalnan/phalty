@@ -24,7 +24,7 @@ exports.getPosts = (req, res) => {
     .select("_id title body created")
     .sort({created: -1}) // sort posts by latest created date
     .then(posts => {
-      res.json(posts );
+      res.json(posts);
     })
     .catch(err => console.log(err));
 };
@@ -67,7 +67,7 @@ exports.postsByUser = (req, res) => {
         if(err) {
           return res.status(400).json({
             error: err
-          })
+          });
         }
         res.json(posts);
       });
