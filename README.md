@@ -78,7 +78,7 @@ $ npm install
 [Backend API routes can be seen here.. ](http://161.35.112.143/api)
 
 
-## Whr to from here?
+## Where to from here?
 
 This current version will be re-built and further refined into a
 react native version that will have further features like maps with pin.
